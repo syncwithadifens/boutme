@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('portfolio.about', ['status' => 'about']);
+    return view('layout.index', ['status' => 'about']);
 });
 Route::get('/resume', function () {
     return view('portfolio.resume', ['status' => 'resume']);
@@ -23,7 +23,7 @@ Route::get('/project', function () {
     return view('portfolio.project', ['status' => 'project']);
 });
 Route::get('/blog', function () {
-    return view('portfolio.project', ['status' => 'blog']);
+    return view('portfolio.blog', ['status' => 'blog']);
 });
 Route::get('/contact', function () {
     return view('portfolio.contact', ['status' => 'contact']);

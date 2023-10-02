@@ -170,30 +170,59 @@
                 <ul class="navbar-list">
 
                     <li class="navbar-item">
-                        <a href="/" class="navbar-link <?= $status == 'about' ? 'active' : '' ?>"
-                            data-nav-link>About</a>
+                        <button class="navbar-link  active" data-nav-link>About</button>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="resume" class="navbar-link <?= $status == 'resume' ? 'active' : '' ?>"
-                            data-nav-link>Resume</a>
+                        <button class="navbar-link" data-nav-link>Resume</button>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="project" class="navbar-link <?= $status == 'project' ? 'active' : '' ?>"
-                            data-nav-link>Portfolio</a>
+                        <button class="navbar-link" data-nav-link>Portfolio</button>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="blog" class="navbar-link <?= $status == 'blog' ? 'active' : '' ?>"
-                            data-nav-link>Blog</a>
+                        <button class="navbar-link" data-nav-link>Blog</button>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="contact" class="navbar-link <?= $status == 'contact' ? 'active' : '' ?>"
-                            data-nav-link>Contact</a>
+                        <button class="navbar-link" data-nav-link>Contact</button>
                     </li>
 
                 </ul>
 
             </nav>
+
+            @include('portfolio.about')
+
+            @include('portfolio.resume')
+
+            @include('portfolio.project')
+
+            @include('portfolio.blog')
+
+            @include('portfolio.contact')
+
+        </div>
+
+    </main>
+
+
+
+
+
+
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

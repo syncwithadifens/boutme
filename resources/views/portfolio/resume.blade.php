@@ -1,192 +1,194 @@
-  @include('layout.header')
-  <article class="resume" data-page="resume">
+<!--
+        - #RESUME
+      -->
 
-      <header>
-          <h2 class="h2 article-title">Resume</h2>
-      </header>
+<article class="resume" data-page="resume">
 
-      <section class="timeline">
+    <header>
+        <h2 class="h2 article-title">Resume</h2>
+    </header>
 
-          <div class="title-wrapper">
-              <div class="icon-box">
-                  <ion-icon name="book-outline"></ion-icon>
-              </div>
+    <section class="timeline">
 
-              <h3 class="h3">Education</h3>
-          </div>
+        <div class="title-wrapper">
+            <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+            </div>
 
-          <ol class="timeline-list">
+            <h3 class="h3">Education</h3>
+        </div>
 
-              <li class="timeline-item">
+        <ol class="timeline-list">
 
-                  <h4 class="h4 timeline-item-title">University school of the arts</h4>
+            <li class="timeline-item">
 
-                  <span>2007 — 2008</span>
+                <h4 class="h4 timeline-item-title">University school of the arts</h4>
 
-                  <p class="timeline-text">
-                      Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti,
-                      quos dolores et
-                      quas molestias
-                      exceptur.
-                  </p>
+                <span>2007 — 2008</span>
 
-              </li>
+                <p class="timeline-text">
+                    Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti,
+                    quos dolores et
+                    quas molestias
+                    exceptur.
+                </p>
 
-              <li class="timeline-item">
+            </li>
 
-                  <h4 class="h4 timeline-item-title">New york academy of art</h4>
+            <li class="timeline-item">
 
-                  <span>2006 — 2007</span>
+                <h4 class="h4 timeline-item-title">New york academy of art</h4>
 
-                  <p class="timeline-text">
-                      Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas
-                      assumenda est
-                      omnis..
-                  </p>
+                <span>2006 — 2007</span>
 
-              </li>
+                <p class="timeline-text">
+                    Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas
+                    assumenda est
+                    omnis..
+                </p>
 
-              <li class="timeline-item">
+            </li>
 
-                  <h4 class="h4 timeline-item-title">High school of art and design</h4>
+            <li class="timeline-item">
 
-                  <span>2002 — 2004</span>
+                <h4 class="h4 timeline-item-title">High school of art and design</h4>
 
-                  <p class="timeline-text">
-                      Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit,
-                      sed consequuntur
-                      magni dolores
-                      eos.
-                  </p>
+                <span>2002 — 2004</span>
 
-              </li>
+                <p class="timeline-text">
+                    Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit,
+                    sed consequuntur
+                    magni dolores
+                    eos.
+                </p>
 
-          </ol>
+            </li>
 
-      </section>
+        </ol>
 
-      <section class="timeline">
+    </section>
 
-          <div class="title-wrapper">
-              <div class="icon-box">
-                  <ion-icon name="book-outline"></ion-icon>
-              </div>
+    <section class="timeline">
 
-              <h3 class="h3">Experience</h3>
-          </div>
+        <div class="title-wrapper">
+            <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+            </div>
 
-          <ol class="timeline-list">
+            <h3 class="h3">Experience</h3>
+        </div>
 
-              <li class="timeline-item">
+        <ol class="timeline-list">
 
-                  <h4 class="h4 timeline-item-title">Creative director</h4>
+            <li class="timeline-item">
 
-                  <span>2015 — Present</span>
+                <h4 class="h4 timeline-item-title">Creative director</h4>
 
-                  <p class="timeline-text">
-                      Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos
-                      dolores et qvuas
-                      molestias
-                      exceptur.
-                  </p>
+                <span>2015 — Present</span>
 
-              </li>
+                <p class="timeline-text">
+                    Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos
+                    dolores et qvuas
+                    molestias
+                    exceptur.
+                </p>
 
-              <li class="timeline-item">
+            </li>
 
-                  <h4 class="h4 timeline-item-title">Art director</h4>
+            <li class="timeline-item">
 
-                  <span>2013 — 2015</span>
+                <h4 class="h4 timeline-item-title">Art director</h4>
 
-                  <p class="timeline-text">
-                      Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti,
-                      quos dolores et
-                      quas molestias
-                      exceptur.
-                  </p>
+                <span>2013 — 2015</span>
 
-              </li>
+                <p class="timeline-text">
+                    Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti,
+                    quos dolores et
+                    quas molestias
+                    exceptur.
+                </p>
 
-              <li class="timeline-item">
+            </li>
 
-                  <h4 class="h4 timeline-item-title">Web designer</h4>
+            <li class="timeline-item">
 
-                  <span>2010 — 2013</span>
+                <h4 class="h4 timeline-item-title">Web designer</h4>
 
-                  <p class="timeline-text">
-                      Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti,
-                      quos dolores et
-                      quas molestias
-                      exceptur.
-                  </p>
+                <span>2010 — 2013</span>
 
-              </li>
+                <p class="timeline-text">
+                    Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti,
+                    quos dolores et
+                    quas molestias
+                    exceptur.
+                </p>
 
-          </ol>
+            </li>
 
-      </section>
+        </ol>
 
-      <section class="skill">
+    </section>
 
-          <h3 class="h3 skills-title">My skills</h3>
+    <section class="skill">
 
-          <ul class="skills-list content-card">
+        <h3 class="h3 skills-title">My skills</h3>
 
-              <li class="skills-item">
+        <ul class="skills-list content-card">
 
-                  <div class="title-wrapper">
-                      <h5 class="h5">Web design</h5>
-                      <data value="80">80%</data>
-                  </div>
+            <li class="skills-item">
 
-                  <div class="skill-progress-bg">
-                      <div class="skill-progress-fill" style="width: 80%;"></div>
-                  </div>
+                <div class="title-wrapper">
+                    <h5 class="h5">Web design</h5>
+                    <data value="80">80%</data>
+                </div>
 
-              </li>
+                <div class="skill-progress-bg">
+                    <div class="skill-progress-fill" style="width: 80%;"></div>
+                </div>
 
-              <li class="skills-item">
+            </li>
 
-                  <div class="title-wrapper">
-                      <h5 class="h5">Graphic design</h5>
-                      <data value="70">70%</data>
-                  </div>
+            <li class="skills-item">
 
-                  <div class="skill-progress-bg">
-                      <div class="skill-progress-fill" style="width: 70%;"></div>
-                  </div>
+                <div class="title-wrapper">
+                    <h5 class="h5">Graphic design</h5>
+                    <data value="70">70%</data>
+                </div>
 
-              </li>
+                <div class="skill-progress-bg">
+                    <div class="skill-progress-fill" style="width: 70%;"></div>
+                </div>
 
-              <li class="skills-item">
+            </li>
 
-                  <div class="title-wrapper">
-                      <h5 class="h5">Branding</h5>
-                      <data value="90">90%</data>
-                  </div>
+            <li class="skills-item">
 
-                  <div class="skill-progress-bg">
-                      <div class="skill-progress-fill" style="width: 90%;"></div>
-                  </div>
+                <div class="title-wrapper">
+                    <h5 class="h5">Branding</h5>
+                    <data value="90">90%</data>
+                </div>
 
-              </li>
+                <div class="skill-progress-bg">
+                    <div class="skill-progress-fill" style="width: 90%;"></div>
+                </div>
 
-              <li class="skills-item">
+            </li>
 
-                  <div class="title-wrapper">
-                      <h5 class="h5">WordPress</h5>
-                      <data value="50">50%</data>
-                  </div>
+            <li class="skills-item">
 
-                  <div class="skill-progress-bg">
-                      <div class="skill-progress-fill" style="width: 50%;"></div>
-                  </div>
+                <div class="title-wrapper">
+                    <h5 class="h5">WordPress</h5>
+                    <data value="50">50%</data>
+                </div>
 
-              </li>
+                <div class="skill-progress-bg">
+                    <div class="skill-progress-fill" style="width: 50%;"></div>
+                </div>
 
-          </ul>
+            </li>
 
-      </section>
+        </ul>
 
-  </article>
-  @include('layout.footer')
+    </section>
+
+</article>

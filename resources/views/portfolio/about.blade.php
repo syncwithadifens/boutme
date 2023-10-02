@@ -1,5 +1,8 @@
-@include('layout.header')
-<article class="about" data-page="about">
+<!--
+        - #ABOUT
+      -->
+
+<article class="about  active" data-page="about">
 
     <header>
         <h2 class="h2 article-title">About me</h2>
@@ -27,8 +30,8 @@
 
 
     <!--
-            - service
-            -->
+  - service
+-->
 
     <section class="service">
 
@@ -40,7 +43,7 @@
 
                 <div class="service-icon-box">
                     <img src="./assets/images/icon-design.svg
-    " alt="design icon" width="40">
+        " alt="design icon" width="40">
                 </div>
 
                 <div class="service-content-box">
@@ -107,8 +110,8 @@
 
 
     <!--
-            - testimonials
-            -->
+  - testimonials
+-->
 
     <section class="testimonials">
 
@@ -222,8 +225,8 @@
 
 
     <!--
-            - testimonials modal
-            -->
+  - testimonials modal
+-->
 
     <div class="modal-container" data-modal-container>
 
@@ -269,8 +272,8 @@
 
 
     <!--
-            - clients
-            -->
+  - clients
+-->
 
     <section class="clients">
 
@@ -319,4 +322,3 @@
     </section>
 
 </article>
-@include('layout.footer')
