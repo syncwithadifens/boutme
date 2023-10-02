@@ -170,39 +170,34 @@
                 <ul class="navbar-list">
 
                     <li class="navbar-item">
-                        <button class="navbar-link  active" data-nav-link>About</button>
+                        <a href="{{ url('/') }}" class="navbar-link <?= $status == 'about' ? 'active' : '' ?>"
+                            data-nav-link>About</a>
                     </li>
 
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Resume</button>
+                        <a href="{{ url('/resume') }}"class="navbar-link <?= $status == 'resume' ? 'active' : '' ?>"
+                            data-nav-link>Resume</a>
                     </li>
 
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Portfolio</button>
+                        <a href="{{ url('/project') }}"class="navbar-link <?= $status == 'project' ? 'active' : '' ?>"
+                            data-nav-link>Portfolio</a>
                     </li>
 
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Blog</button>
+                        <a href="{{ url('/blog') }}"class="navbar-link <?= $status == 'blog' ? 'active' : '' ?>"
+                            data-nav-link>Blog</a>
                     </li>
 
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Contact</button>
+                        <a href="{{ url('/contact') }}"class="navbar-link <?= $status == 'contact' ? 'active' : '' ?>"
+                            data-nav-link>Contact</a>
                     </li>
 
                 </ul>
 
             </nav>
-
-            @include('portfolio.about')
-
-            @include('portfolio.resume')
-
-            @include('portfolio.project')
-
-            @include('portfolio.blog')
-
-            @include('portfolio.contact')
-
+            @yield('content')
         </div>
 
     </main>

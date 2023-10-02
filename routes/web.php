@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout.index', ['status' => 'about']);
+    return view('portfolio.about', ['status' => 'about']);
 });
 Route::get('/resume', function () {
     return view('portfolio.resume', ['status' => 'resume']);
