@@ -6,7 +6,7 @@
             <h2 class="h2 article-title">About me</h2>
         </header>
 
-        <section class="about-text">
+        <section class="about-text" style="text-align: justify">
             @foreach ($data['about'] as $item)
                 {{ $item->description }}
             @endforeach
@@ -92,8 +92,8 @@
 
 
         <!--
-                                                                                      - testimonials
-                                                                                    -->
+                                                                                                              - testimonials
+                                                                                                            -->
 
         <section class="testimonials">
 
@@ -203,8 +203,8 @@
 
 
         <!--
-                                                                                      - testimonials modal
-                                                                                    -->
+                                                                                                              - testimonials modal
+                                                                                                            -->
 
         <div class="modal-container" data-modal-container>
 
@@ -250,22 +250,24 @@
 
 
         <!--
-                                                                                      - clients
-                                                                                    -->
+                                                                                                              - clients
+                                                                                                            -->
 
         <section class="clients">
 
-            <h3 class="h3 clients-title">Clients</h3>
+            <h3 class="h3 clients-title">Tech Stack</h3>
 
             <ul class="clients-list has-scrollbar">
 
-                <li class="clients-item">
-                    <a href="#">
-                        <img src="./assets/images/logo-1-color.png" alt="client logo">
-                    </a>
-                </li>
+                @foreach ($data['tech_stack'] as $item)
+                    <li class="clients-item">
+                        <a href="#">
+                            <img src="./assets/images/{{ $item->name }}" alt="client logo">
+                        </a>
+                    </li>
+                @endforeach
 
-                <li class="clients-item">
+                {{-- <li class="clients-item">
                     <a href="#">
                         <img src="./assets/images/logo-2-color.png" alt="client logo">
                     </a>
@@ -293,7 +295,7 @@
                     <a href="#">
                         <img src="./assets/images/logo-6-color.png" alt="client logo">
                     </a>
-                </li>
+                </li> --}}
 
             </ul>
 
