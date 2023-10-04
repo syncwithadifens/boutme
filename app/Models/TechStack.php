@@ -5,9 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class About extends Model
+class TechStack extends Model
 {
     use HasFactory;
 
     protected $guard = ['id'];
+    protected $table = 'about_tech_stack';
 }

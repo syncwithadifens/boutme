@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vCard - Personal Portfolio</title>
+    <title>Personal Portfolio</title>
 
     <!--
     - favicon
@@ -46,9 +46,9 @@
                 </figure>
 
                 <div class="info-content">
-                    <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
+                    <h1 class="name" title="Richard hanrick">{{ $data['user']->name }}</h1>
 
-                    <p class="title">Web developer</p>
+                    <p class="title">{{ $data['user']->job }}</p>
                 </div>
 
                 <button class="info_more-btn" data-sidebar-btn>
@@ -74,7 +74,7 @@
                         <div class="contact-info">
                             <p class="contact-title">Email</p>
 
-                            <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
+                            <a href="mailto:richard@example.com" class="contact-link">{{ $data['user']->email }}</a>
                         </div>
 
                     </li>
@@ -88,7 +88,7 @@
                         <div class="contact-info">
                             <p class="contact-title">Phone</p>
 
-                            <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+                            <a href="tel:+12133522795" class="contact-link">{{ $data['user']->phone_number }}</a>
                         </div>
 
                     </li>
@@ -102,7 +102,7 @@
                         <div class="contact-info">
                             <p class="contact-title">Birthday</p>
 
-                            <time datetime="1982-06-23">June 23, 1982</time>
+                            <time datetime="1982-06-23">{{ $data['user']->birthday }}</time>
                         </div>
 
                     </li>
@@ -116,7 +116,7 @@
                         <div class="contact-info">
                             <p class="contact-title">Location</p>
 
-                            <address>Sacramento, California, USA</address>
+                            <address>{{ $data['user']->address }}</address>
                         </div>
 
                     </li>
@@ -170,27 +170,28 @@
                 <ul class="navbar-list">
 
                     <li class="navbar-item">
-                        <a href="{{ url('/') }}" class="navbar-link <?= $status == 'about' ? 'active' : '' ?>"
+                        <a href="{{ url('/') }}"
+                            class="navbar-link <?= $data['status'] == 'about' ? 'active' : '' ?>"
                             data-nav-link>About</a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="{{ url('/resume') }}"class="navbar-link <?= $status == 'resume' ? 'active' : '' ?>"
+                        <a href="{{ url('/resume') }}"class="navbar-link <?= $data['status'] == 'resume' ? 'active' : '' ?>"
                             data-nav-link>Resume</a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="{{ url('/project') }}"class="navbar-link <?= $status == 'project' ? 'active' : '' ?>"
-                            data-nav-link>Portfolio</a>
+                        <a href="{{ url('/project') }}"class="navbar-link <?= $data['status'] == 'project' ? 'active' : '' ?>"
+                            data-nav-link>Project</a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="{{ url('/blog') }}"class="navbar-link <?= $status == 'blog' ? 'active' : '' ?>"
-                            data-nav-link>Blog</a>
+                        <a href="{{ url('/certificate') }}"class="navbar-link <?= $data['status'] == 'certificate' ? 'active' : '' ?>"
+                            data-nav-link>Certificate</a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="{{ url('/contact') }}"class="navbar-link <?= $status == 'contact' ? 'active' : '' ?>"
+                        <a href="{{ url('/contact') }}"class="navbar-link <?= $data['status'] == 'contact' ? 'active' : '' ?>"
                             data-nav-link>Contact</a>
                     </li>
 

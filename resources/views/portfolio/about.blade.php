@@ -7,54 +7,38 @@
         </header>
 
         <section class="about-text">
-            <p>
-                I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and
-                print media.
-                I enjoy
-                turning complex problems into simple, beautiful and intuitive designs.
-            </p>
-
-            <p>
-                My job is to build your website so that it is functional and user-friendly but at the same time
-                attractive.
-                Moreover, I
-                add personal touch to your product and make sure that is eye-catching and easy to use. My aim is
-                to bring
-                across your
-                message and identity in the most creative way. I created web design for many famous brand
-                companies.
-            </p>
+            @foreach ($data['about'] as $item)
+                {{ $item->description }}
+            @endforeach
         </section>
 
-
-        <!--
-          - service
-        -->
 
         <section class="service">
 
             <h3 class="h3 service-title">What i'm doing</h3>
 
             <ul class="service-list">
+                @foreach ($data['service'] as $item)
+                    <li class="service-item">
 
-                <li class="service-item">
-
-                    <div class="service-icon-box">
-                        <img src="./assets/images/icon-design.svg
+                        <div class="service-icon-box">
+                            <img src="./assets/images/icon-design.svg
         " alt="design icon" width="40">
-                    </div>
+                        </div>
 
-                    <div class="service-content-box">
-                        <h4 class="h4 service-item-title">Web design</h4>
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title">{{ $item->name }}</h4>
 
-                        <p class="service-item-text">
-                            The most modern and high-quality design made at a professional level.
-                        </p>
-                    </div>
+                            <p class="service-item-text">
+                                {{ $item->description }}
+                            </p>
+                        </div>
 
-                </li>
+                    </li>
+                @endforeach
 
-                <li class="service-item">
+
+                {{-- <li class="service-item">
 
                     <div class="service-icon-box">
                         <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
@@ -100,7 +84,7 @@
                         </p>
                     </div>
 
-                </li>
+                </li> --}}
 
             </ul>
 
@@ -108,8 +92,8 @@
 
 
         <!--
-          - testimonials
-        -->
+                                                                                      - testimonials
+                                                                                    -->
 
         <section class="testimonials">
 
@@ -117,32 +101,28 @@
 
             <ul class="testimonials-list has-scrollbar">
 
-                <li class="testimonials-item">
-                    <div class="content-card" data-testimonials-item>
+                @foreach ($data['testimony'] as $item)
+                    <li class="testimonials-item">
+                        <div class="content-card" data-testimonials-item>
 
-                        <figure class="testimonials-avatar-box">
-                            <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60"
-                                data-testimonials-avatar>
-                        </figure>
+                            <figure class="testimonials-avatar-box">
+                                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60"
+                                    data-testimonials-avatar>
+                            </figure>
 
-                        <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+                            <h4 class="h4 testimonials-item-title" data-testimonials-title>{{ $item->name }}</h4>
 
-                        <div class="testimonials-text" data-testimonials-text>
-                            <p>
-                                Richard was hired to create a corporate identity. We were very pleased with the
-                                work done. She has a
-                                lot of experience
-                                and is very concerned about the needs of client. Lorem ipsum dolor sit amet,
-                                ullamcous cididt
-                                consectetur adipiscing
-                                elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                            </p>
+                            <div class="testimonials-text" data-testimonials-text>
+                                <p>
+                                    {{ $item->feedback }}
+                                </p>
+                            </div>
+
                         </div>
+                    </li>
+                @endforeach
 
-                    </div>
-                </li>
-
-                <li class="testimonials-item">
+                {{-- <li class="testimonials-item">
                     <div class="content-card" data-testimonials-item>
 
                         <figure class="testimonials-avatar-box">
@@ -215,7 +195,7 @@
                         </div>
 
                     </div>
-                </li>
+                </li> --}}
 
             </ul>
 
@@ -223,8 +203,8 @@
 
 
         <!--
-          - testimonials modal
-        -->
+                                                                                      - testimonials modal
+                                                                                    -->
 
         <div class="modal-container" data-modal-container>
 
@@ -270,8 +250,8 @@
 
 
         <!--
-          - clients
-        -->
+                                                                                      - clients
+                                                                                    -->
 
         <section class="clients">
 

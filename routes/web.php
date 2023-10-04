@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ResumeController;
+use App\Models\Certificate;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,18 +19,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('portfolio.about', ['status' => 'about']);
-});
-Route::get('/resume', function () {
-    return view('portfolio.resume', ['status' => 'resume']);
-});
-Route::get('/project', function () {
-    return view('portfolio.project', ['status' => 'project']);
-});
-Route::get('/blog', function () {
-    return view('portfolio.blog', ['status' => 'blog']);
-});
-Route::get('/contact', function () {
-    return view('portfolio.contact', ['status' => 'contact']);
-});
+Route::get('/', [AboutController::class, 'index']);
+Route::resource('about', AboutController::class);
+Route::resource('resume', ResumeController::class);
+Route::resource('project', ProjectController::class);
+Route::resource('certificate', CertificateController::class);
+Route::resource('contact', ContactController::class);

@@ -18,22 +18,21 @@
 
             <ol class="timeline-list">
 
-                <li class="timeline-item">
+                @foreach ($data['education'] as $item)
+                    <li class="timeline-item">
 
-                    <h4 class="h4 timeline-item-title">University school of the arts</h4>
+                        <h4 class="h4 timeline-item-title">{{ $item->name }}</h4>
 
-                    <span>2007 — 2008</span>
+                        <span>{{ $item->year }}</span>
 
-                    <p class="timeline-text">
-                        Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti,
-                        quos dolores et
-                        quas molestias
-                        exceptur.
-                    </p>
+                        <p class="timeline-text">
+                            {{ $item->description }}
+                        </p>
 
-                </li>
+                    </li>
+                @endforeach
 
-                <li class="timeline-item">
+                {{-- <li class="timeline-item">
 
                     <h4 class="h4 timeline-item-title">New york academy of art</h4>
 
@@ -60,7 +59,7 @@
                         eos.
                     </p>
 
-                </li>
+                </li> --}}
 
             </ol>
 
@@ -78,22 +77,21 @@
 
             <ol class="timeline-list">
 
-                <li class="timeline-item">
+                @foreach ($data['experience'] as $item)
+                    <li class="timeline-item">
 
-                    <h4 class="h4 timeline-item-title">Creative director</h4>
+                        <h4 class="h4 timeline-item-title">{{ $item->name }}</h4>
 
-                    <span>2015 — Present</span>
+                        <span>{{ $item->year }}</span>
 
-                    <p class="timeline-text">
-                        Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos
-                        dolores et qvuas
-                        molestias
-                        exceptur.
-                    </p>
+                        <p class="timeline-text">
+                            {{ $item->description }}
+                        </p>
 
-                </li>
+                    </li>
+                @endforeach
 
-                <li class="timeline-item">
+                {{-- <li class="timeline-item">
 
                     <h4 class="h4 timeline-item-title">Art director</h4>
 
@@ -121,7 +119,7 @@
                         exceptur.
                     </p>
 
-                </li>
+                </li> --}}
 
             </ol>
 
@@ -133,20 +131,22 @@
 
             <ul class="skills-list content-card">
 
-                <li class="skills-item">
+                @foreach ($data['skill'] as $item)
+                    <li class="skills-item">
 
-                    <div class="title-wrapper">
-                        <h5 class="h5">Web design</h5>
-                        <data value="80">80%</data>
-                    </div>
+                        <div class="title-wrapper">
+                            <h5 class="h5">{{ $item->name }}</h5>
+                            <data value="{{ $item->rate }}">{{ $item->rate }}%</data>
+                        </div>
 
-                    <div class="skill-progress-bg">
-                        <div class="skill-progress-fill" style="width: 80%;"></div>
-                    </div>
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: {{ $item->rate }}%;"></div>
+                        </div>
 
-                </li>
+                    </li>
+                @endforeach
 
-                <li class="skills-item">
+                {{-- <li class="skills-item">
 
                     <div class="title-wrapper">
                         <h5 class="h5">Graphic design</h5>
@@ -183,7 +183,7 @@
                         <div class="skill-progress-fill" style="width: 50%;"></div>
                     </div>
 
-                </li>
+                </li> --}}
 
             </ul>
 

@@ -3,42 +3,41 @@
     <article class="blog active" data-page="blog">
 
         <header>
-            <h2 class="h2 article-title">Blog</h2>
+            <h2 class="h2 article-title">Certificate</h2>
         </header>
 
         <section class="blog-posts">
 
             <ul class="blog-posts-list">
 
-                <li class="blog-post-item">
-                    <a href="#">
+                @foreach ($data['certificate'] as $item)
+                    <li class="blog-post-item">
+                        <a href="#">
 
-                        <figure class="blog-banner-box">
-                            <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                        </figure>
+                            <figure class="blog-banner-box">
+                                <img src="./assets/images/{{ $item->img }}" alt="Design conferences in 2022"
+                                    loading="lazy">
+                            </figure>
 
-                        <div class="blog-content">
+                            <div class="blog-content">
 
-                            <div class="blog-meta">
-                                <p class="blog-category">Design</p>
+                                <div class="blog-meta">
+                                    <time datetime="2022-02-23">{{ $item->year }}</time>
+                                </div>
 
-                                <span class="dot"></span>
+                                <h3 class="h3 blog-item-title">{{ $item->course }}</h3>
 
-                                <time datetime="2022-02-23">Fab 23, 2022</time>
+                                <p class="blog-text">
+                                    {{ $item->name }}
+                                </p>
+
                             </div>
 
-                            <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+                        </a>
+                    </li>
+                @endforeach
 
-                            <p class="blog-text">
-                                Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                            </p>
-
-                        </div>
-
-                    </a>
-                </li>
-
-                <li class="blog-post-item">
+                {{-- <li class="blog-post-item">
                     <a href="#">
 
                         <figure class="blog-banner-box">
@@ -179,7 +178,7 @@
                         </div>
 
                     </a>
-                </li>
+                </li> --}}
 
             </ul>
 

@@ -3,7 +3,7 @@
     <article class="portfolio active" data-page="portfolio">
 
         <header>
-            <h2 class="h2 article-title">Portfolio</h2>
+            <h2 class="h2 article-title">Project</h2>
         </header>
 
         <section class="projects">
@@ -14,17 +14,19 @@
                     <button class="active" data-filter-btn>All</button>
                 </li>
 
-                <li class="filter-item">
-                    <button data-filter-btn>Web design</button>
-                </li>
-
+                @foreach ($data['project'] as $item)
+                    <li class="filter-item">
+                        <button data-filter-btn>{{ $item->categories->name }}</button>
+                    </li>
+                @endforeach
+                {{-- 
                 <li class="filter-item">
                     <button data-filter-btn>Applications</button>
                 </li>
 
                 <li class="filter-item">
                     <button data-filter-btn>Web development</button>
-                </li>
+                </li> --}}
 
             </ul>
 
@@ -42,21 +44,23 @@
 
                 <ul class="select-list">
 
-                    <li class="select-item">
+                    {{-- <li class="select-item">
                         <button data-select-item>All</button>
-                    </li>
+                    </li> --}}
 
-                    <li class="select-item">
-                        <button data-select-item>Web design</button>
-                    </li>
-
+                    @foreach ($data['project'] as $item)
+                        <li class="select-item">
+                            <button data-select-item>{{ $item->categories->name }}</button>
+                        </li>
+                    @endforeach
+                    {{-- 
                     <li class="select-item">
                         <button data-select-item>Applications</button>
                     </li>
 
                     <li class="select-item">
                         <button data-select-item>Web development</button>
-                    </li>
+                    </li> --}}
 
                 </ul>
 
@@ -64,25 +68,27 @@
 
             <ul class="project-list">
 
-                <li class="project-item  active" data-filter-item data-category="web development">
-                    <a href="#">
+                @foreach ($data['project'] as $item)
+                    <li class="project-item  active" data-filter-item data-category="web development">
+                        <a href="#">
 
-                        <figure class="project-img">
-                            <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                            </div>
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
 
-                            <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                        </figure>
+                                <img src="./assets/images/{{ $item->img }}" alt="finance" loading="lazy">
+                            </figure>
 
-                        <h3 class="project-title">Finance</h3>
+                            <h3 class="project-title">{{ $item->name }}</h3>
 
-                        <p class="project-category">Web development</p>
+                            <p class="project-category">{{ $item->categories->name }}</p>
 
-                    </a>
-                </li>
+                        </a>
+                    </li>
+                @endforeach
 
-                <li class="project-item  active" data-filter-item data-category="web development">
+                {{-- <li class="project-item  active" data-filter-item data-category="web development">
                     <a href="#">
 
                         <figure class="project-img">
@@ -224,7 +230,7 @@
                         <p class="project-category">Web development</p>
 
                     </a>
-                </li>
+                </li> --}}
 
             </ul>
 

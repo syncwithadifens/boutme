@@ -2,15 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\About;
-use App\Models\Certificate;
-use App\Models\Service;
-use App\Models\TechStack;
-use App\Models\Testimony;
+use App\Models\Project;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class AboutController extends Controller
+class ProjectController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,13 +15,10 @@ class AboutController extends Controller
     {
         $data = [
             'user' => User::all()->first(),
-            'about' => About::all(),
-            'service' => Service::all(),
-            'testimony' => Testimony::all(),
-            'tech_stack' => TechStack::all(),
-            'status' => 'about'
+            'project' => Project::with('categories')->get(),
+            'status' => 'project'
         ];
-        return view('portfolio.about', compact('data'));
+        return view('portfolio.project', compact('data'));
     }
 
     /**
@@ -47,7 +40,7 @@ class AboutController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(about $about)
+    public function show(string $id)
     {
         //
     }
@@ -55,7 +48,7 @@ class AboutController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(about $about)
+    public function edit(string $id)
     {
         //
     }
@@ -63,7 +56,7 @@ class AboutController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, about $about)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -71,7 +64,7 @@ class AboutController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(about $about)
+    public function destroy(string $id)
     {
         //
     }
